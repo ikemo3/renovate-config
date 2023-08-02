@@ -17,6 +17,11 @@
       {
         "matchSourceUrls": "https://github.com/withastro/astro",
         "groupName": "astro monorepo"
+      },
+      {
+        "matchDepTypes": ["devDependencies"],
+        "matchUpdateTypes": ["minor", "patch"],
+        "automerge": true
       }
     ]
   }
