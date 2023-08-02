@@ -5,7 +5,13 @@
       {
         "extends": ["packages:eslint"],
         "matchUpdateTypes": ["minor", "patch"],
-        "groupName": "dependencies eslint",
+        "groupName": "eslint minor and patch updates",
+        "automerge": true
+      },
+      {
+        "extends": ["monorepo:sentry-javascript"],
+        "matchUpdateTypes": ["minor", "patch"],
+        "groupName": "sentry-javascript minor and patch updates",
         "automerge": true
       }
     ]
