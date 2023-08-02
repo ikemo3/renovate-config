@@ -13,6 +13,10 @@
         "matchUpdateTypes": ["minor", "patch"],
         "groupName": "sentry-javascript minor and patch updates",
         "automerge": true
+      },
+      {
+        "matchSourceUrls": "https://github.com/withastro/astro",
+        "groupName": "astro monorepo"
       }
     ]
   }
