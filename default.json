@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "npm": {
+    "packageRules": [
+      {
+        "extends": ["packages:eslint"],
+        "matchUpdateTypes": ["minor", "patch"],
+        "groupName": "dependencies eslint",
+        "automerge": true
+      }
+    ]
+  }
+}
