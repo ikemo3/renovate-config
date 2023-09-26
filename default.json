@@ -26,5 +26,15 @@
         "automerge": true
       }
     ]
-  }
+  },
+  "regexManagers": [
+    {
+      "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
+      "matchStrings": ["node-version: \"(?<currentValue>.+?)\""],
+      "depNameTemplate": "node",
+      "lookupNameTemplate": "nodejs/node",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "node"
+    }
+  ]
 }
