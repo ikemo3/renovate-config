@@ -35,6 +35,12 @@
       "lookupNameTemplate": "nodejs/node",
       "datasourceTemplate": "github-tags",
       "versioningTemplate": "node"
+    },
+    {
+      "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
+      "matchStrings": ["pnpm-version: \"(?<currentValue>.+?)\""],
+      "depNameTemplate": "pnpm",
+      "datasourceTemplate": "npm"
     }
   ]
 }
