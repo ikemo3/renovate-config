@@ -45,7 +45,10 @@
   "regexManagers": [
     {
       "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
-      "matchStrings": ["node-version: \"(?<currentValue>.+?)\""],
+      "matchStrings": [
+        "node-version: \"(?<currentValue>.+)\"",
+        "node-version: (?<currentValue>.+)"
+      ],
       "depNameTemplate": "node",
       "lookupNameTemplate": "nodejs/node",
       "datasourceTemplate": "github-tags",
@@ -53,13 +56,19 @@
     },
     {
       "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
-      "matchStrings": ["pnpm-version: \"(?<currentValue>.+?)\""],
+      "matchStrings": [
+        "pnpm-version: \"(?<currentValue>.+)\"",
+        "pnpm-version: (?<currentValue>.+)"
+      ],
       "depNameTemplate": "pnpm",
       "datasourceTemplate": "npm"
     },
     {
       "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
-      "matchStrings": ["terraform-version: \"(?<currentValue>.+?)\""],
+      "matchStrings": [
+        "terraform-version: \"(?<currentValue>.+)\"",
+        "terraform-version: (?<currentValue>.+)"
+      ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "hashicorp/terraform",
       "extractVersionTemplate": "^v(?<version>.*)$"
