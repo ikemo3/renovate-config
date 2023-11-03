@@ -73,7 +73,10 @@
     },
     {
       "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
-      "matchStrings": ["python-version: \"(?<currentValue>.+?)\""],
+      "matchStrings": [
+        "python-version: \"(?<currentValue>.+)\"",
+        "python-version: (?<currentValue>.+)"
+      ],
       "datasourceTemplate": "github-tags",
       "depNameTemplate": "python/cpython",
       "extractVersionTemplate": "^v(?<version>.*)$"
