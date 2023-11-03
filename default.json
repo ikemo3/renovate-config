@@ -56,6 +56,20 @@
       "matchStrings": ["pnpm-version: \"(?<currentValue>.+?)\""],
       "depNameTemplate": "pnpm",
       "datasourceTemplate": "npm"
+    },
+    {
+      "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
+      "matchStrings": ["terraform-version: \"(?<currentValue>.+?)\""],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "hashicorp/terraform",
+      "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "fileMatch": "^.*\\/versions.tf$",
+      "matchStrings": ["required_version = \">= (?<currentValue>.+?)\""],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "hashicorp/terraform",
+      "extractVersionTemplate": "^v(?<version>.*)$"
     }
   ]
 }
