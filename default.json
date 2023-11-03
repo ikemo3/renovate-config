@@ -70,6 +70,13 @@
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "hashicorp/terraform",
       "extractVersionTemplate": "^v(?<version>.*)$"
+    },
+    {
+      "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
+      "matchStrings": ["python-version: \"(?<currentValue>.+?)\""],
+      "datasourceTemplate": "github-tags",
+      "depNameTemplate": "python/cpython",
+      "extractVersionTemplate": "^v(?<version>.*)$"
     }
   ]
 }
