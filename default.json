@@ -74,13 +74,6 @@
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
     {
-      "fileMatch": "^.*\\/versions.tf$",
-      "matchStrings": ["required_version = \">= (?<currentValue>.+?)\""],
-      "datasourceTemplate": "github-releases",
-      "depNameTemplate": "hashicorp/terraform",
-      "extractVersionTemplate": "^v(?<version>.*)$"
-    },
-    {
       "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
       "matchStrings": [
         "python-version: \"(?<currentValue>.+)\"",
