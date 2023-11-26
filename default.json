@@ -42,6 +42,15 @@
       }
     ]
   },
+  "regex": {
+    "packageRules": [
+      {
+        "matchPackageNames": ["pnpm"],
+        "matchUpdateTypes": ["minor", "patch"],
+        "automerge": true
+      }
+    ]
+  },
   "regexManagers": [
     {
       "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
