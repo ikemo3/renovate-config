@@ -45,6 +45,11 @@
   "regex": {
     "packageRules": [
       {
+        "matchPackageNames": ["node"],
+        "matchUpdateTypes": ["minor", "patch"],
+        "automerge": true
+      },
+      {
         "matchPackageNames": ["pnpm"],
         "matchUpdateTypes": ["minor", "patch"],
         "automerge": true
