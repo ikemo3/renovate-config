@@ -54,7 +54,7 @@
   "regex": {
     "packageRules": [
       {
-        "matchPackageNames": ["node"],
+        "matchDepNames": ["node"],
         "matchUpdateTypes": ["minor", "patch"],
         "automerge": true
       },
