@@ -106,5 +106,8 @@
       "depNameTemplate": "python/cpython",
       "extractVersionTemplate": "^v(?<version>.*)$"
     }
-  ]
+  ],
+  "major": {
+    "dependencyDashboardApproval": true
+  }
 }
