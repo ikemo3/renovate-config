@@ -15,6 +15,13 @@
       }
     }
   ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": "patch",
+      "groupName": "dependencies patch",
+      "automerge": true
+    }
+  ],
   "npm": {
     "packageRules": [
       {
