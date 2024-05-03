@@ -1,25 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "hostRules": [
-    {
-      "matchHost": "https://npm.pkg.github.com/",
-      "hostType": "npm",
-      "encrypted": {
-        "token": "wcFMA/xDdHCJBTolAQ/9Hpg0Mbiqr7+pZ9QuUVbyolUU9KPlGa1/+zL5MFfonmSU/vGAelIuHxElfOpLs0mBuHkXUvZ6w/rt5elG7+SYBL23vUN3hzxaehnnOQMjq/aLaSI7xk1lmTg2vqd8c+ecz7YrlqeDjxlRzZSz5dF0vJtXAvAkU3r3H1Imy19OhKF9sTTW+fYOm45zvoaXkVQwPOKaeeNyVw5lCX76qT0lwHjQumOdKEDlcip432aL1fwuBQYj7gT1BrCKXt3kcpEOJ1jJpixD4JGHWxZWuGFSiw9RpVl8AGcZ/e7ou4lIpBVcm7i9BRxUV2MLKdXHj9SxruUIHu2zanchWJSpFWqu241pVRKtKhyYqcdKsBPoBSsxE6w2CeS4J45oZcQ4d2gBxfeiqd7mhclfzIROpv/lh8prVRE4Mp8S5840oEuMxvkhPZiYz41LWHjoxNpnVxQy/q2VdkIyPZF2xyc7p25mn/FpO0Vfc4OULxwkzynfL9uTjyTV8smUxy1tt0/Mt78TFCqKxePBEfKGoeUL9lpPDDQVfvkbErPgCU/QgJRj0Jl6prP7MuXJJcN3wawZbegC/Lfs+3Zu91godEc6Kp6JuVgweqW/OOjy83Wbp/ctdv55Re5ZGlcWgvlr08vddnnbRx0IfwxY/pZupKB+MA0EE4bt6zagsMatrBjiUa0QRZvSdQGIttT/nRYN69UAxaFp0D65R+x7FRhvsKsRu83r90t+KYpwioXWEaY9pwLQF9QCOykve34T4/K6F4I8nbvIrGLH5HsKzfzhZo8gRxNk5QyETp2Ch/rPbCrnk1dTl1Nbr6NnBAHhyAolu3rQNuTLF/LQGvfY3w"
-      }
-    },
-    {
-      "baseUrl": "https://app.terraform.io",
-      "encrypted": {
-        "token": "wcFMA/xDdHCJBTolAQ/+LOiSlIwl3WHe/cLAF7YVXVwnrZwUSpwu0mmH3yxTl5bZt1nMq0OBxFZi5R+pKu981EvE922w4sp7YK3Mhzv2phPwY/Owblz+Yb2Hm06RcTE8A4+DSEPSGMCUSOiInFm4LpmeQG1l9c9vmW/NjcPLU88S9P8VN3IUGvnSwxTOr19P/7kINY7repTV03IP7ac34Qg3g6yrEpd0j05lmxdlFPpztUueVuwvsPftxpxWx/+1m+GclgyW+8xG3Uxh+cFboUDIHx4uVgWe9Jbr4Li8nvYKBtK+SG4tpg1sXeXRi/1pyzUexm0w2y09Fvl1NsJ4Qz08cy3C5bSi1ad3m4qMyZYQ4jj5KrvhpcpoQ6WsOArDCKHwWJnS5QJ43gLNQ1CVoR6QceWZW5z0HAHktMLaAXXMmJzWbbZSLvXczYH8uuawvU/pUu1XfTN3oKc50voxRnnspS5EeaCdGGPPL4elPWiZS9Txclq3aema13aBM0rHuiggg86YEe0WhjY+nwAO+ILMUCmBm07nAvCVbX58MnIKim+H2DFMAoB513PSEzYQuNE4CDqOiCtfIoazyjmMCsBmQyRzP02q3I30kyW/PrvgA4TH/YB2rwuAfRoYSrMh3xL3iPKq8I7qJ8MGt8zmQpbaBB0hzj6W5QSkr2qIHhWg1H6PBvCoDaRnXme321XSpwFM6yTWi//WaStf+d0dNcGwmuPuiKcb5sDKfj0tCtJf8yNIMdfnll2t5KonyulMWWFxMdyQR+pum4bUrvzwlf51B3NPKHVqRUOtrmFsbyNmJTi/Ka0NmsfL0PO/+KcrJ79M2BtoNCPkFot1MBdOkyjySsxdZcthk49bwjnly8HO8Cnf7xyGCAH08hg3PGsvoKa5hDAaDrZnLymFz3VjoLyeTGXQdXYQ"
-      }
-    }
-  ],
+  "timezone": "Asia/Tokyo",
   "packageRules": [
     {
       "matchUpdateTypes": "patch",
       "groupName": "dependencies patch",
       "automerge": true
+    },
+    {
+      "matchPackageNames": ["aws-sdk"],
+      "schedule": ["monthly"]
     }
   ],
   "npm": {
@@ -114,6 +104,15 @@
       "extractVersionTemplate": "^v(?<version>.*)$"
     }
   ],
+  "terraform": {
+    "schedule": ["after 2am every saturday"],
+    "packageRules": [
+      {
+        "matchUpdateTypes": ["minor", "patch"],
+        "automerge": true
+      }
+    ]
+  },
   "major": {
     "dependencyDashboardApproval": true
   }
