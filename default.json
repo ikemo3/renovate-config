@@ -54,11 +54,6 @@
         "matchDepNames": ["node"],
         "matchUpdateTypes": ["minor", "patch"],
         "automerge": true
-      },
-      {
-        "matchPackageNames": ["pnpm"],
-        "matchUpdateTypes": ["minor", "patch"],
-        "automerge": true
       }
     ]
   },
@@ -73,15 +68,6 @@
       "lookupNameTemplate": "nodejs/node",
       "datasourceTemplate": "github-tags",
       "versioningTemplate": "node"
-    },
-    {
-      "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
-      "matchStrings": [
-        "pnpm-version: \"(?<currentValue>.+)\"",
-        "pnpm-version: (?<currentValue>.+)"
-      ],
-      "depNameTemplate": "pnpm",
-      "datasourceTemplate": "npm"
     },
     {
       "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
