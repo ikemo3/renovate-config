@@ -99,6 +99,9 @@
       }
     ]
   },
+  "minor": {
+    "schedule": ["every weekend"]
+  },
   "major": {
     "dependencyDashboardApproval": true
   }
