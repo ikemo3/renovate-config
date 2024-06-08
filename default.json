@@ -4,7 +4,6 @@
   "packageRules": [
     {
       "matchUpdateTypes": "patch",
-      "groupName": "dependencies patch",
       "automerge": true
     },
     {
@@ -41,10 +40,6 @@
         "matchPackageNames": ["pnpm"],
         "matchUpdateTypes": ["minor", "patch"],
         "automerge": true
-      },
-      {
-        "matchPackageNames": ["prettier"],
-        "allowedVersions": "<=3.2.2"
       }
     ]
   },
