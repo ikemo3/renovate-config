@@ -87,11 +87,5 @@
         "automerge": true
       }
     ]
-  },
-  "minor": {
-    "schedule": ["every weekend"]
-  },
-  "major": {
-    "dependencyDashboardApproval": true
   }
 }
