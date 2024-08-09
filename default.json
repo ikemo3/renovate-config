@@ -74,9 +74,10 @@
         "python-version: \"(?<currentValue>.+)\"",
         "python-version: (?<currentValue>.+)"
       ],
-      "datasourceTemplate": "github-tags",
-      "depNameTemplate": "python/cpython",
-      "extractVersionTemplate": "^v(?<version>.*)$"
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "python",
+      "extractVersionTemplate": "^(?<version>\\d+\\.\\d+\\.\\d+)$",
+      "versioningTemplate": "python"
     }
   ],
   "terraform": {
