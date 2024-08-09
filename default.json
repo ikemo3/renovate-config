@@ -74,7 +74,7 @@
         "python-version: \"(?<currentValue>.+)\"",
         "python-version: (?<currentValue>.+)"
       ],
-      "datasourceTemplate": "github-releases",
+      "datasourceTemplate": "github-tags",
       "depNameTemplate": "python",
       "extractVersionTemplate": "^(?<version>\\d+\\.\\d+\\.\\d+)$",
       "versioningTemplate": "python"
