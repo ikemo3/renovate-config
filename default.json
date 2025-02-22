@@ -7,7 +7,7 @@
       "automerge": true
     },
     {
-      "matchPackageNames": ["aws-sdk"],
+      "matchPackageNames": ["boto3"],
       "schedule": ["monthly"]
     }
   ],
