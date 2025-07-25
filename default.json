@@ -90,11 +90,6 @@
       "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+\\.\\d+)$"
     }
   ],
-  "python": {
-    "lockFileMaintenance": {
-      "enabled": true
-    }
-  },
   "terraform": {
     "schedule": ["after 2am every saturday"],
     "packageRules": [
