@@ -51,19 +51,21 @@
       }
     ]
   },
-  "regexManagers": [
+  "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
       "matchStrings": [
         "node-version: \"(?<currentValue>.+)\"",
         "node-version: (?<currentValue>.+)"
       ],
       "depNameTemplate": "node",
-      "lookupNameTemplate": "nodejs/node",
+      "packageNameTemplate": "nodejs/node",
       "datasourceTemplate": "github-tags",
       "versioningTemplate": "node"
     },
     {
+      "customType": "regex",
       "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
       "matchStrings": [
         "pnpm-version: \"(?<currentValue>.+)\"",
@@ -73,6 +75,7 @@
       "datasourceTemplate": "npm"
     },
     {
+      "customType": "regex",
       "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
       "matchStrings": [
         "terraform-version: \"(?<currentValue>.+)\"",
@@ -83,6 +86,7 @@
       "extractVersionTemplate": "^v(?<version>.*)$"
     },
     {
+      "customType": "regex",
       "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
       "matchStrings": ["python-version: \"(?<currentValue>.+)\""],
       "datasourceTemplate": "github-tags",
@@ -91,7 +95,7 @@
     }
   ],
   "terraform": {
-    "schedule": ["after 2am every saturday"],
+    "schedule": ["after 2am on saturday"],
     "packageRules": [
       {
         "matchUpdateTypes": ["minor", "patch"],
