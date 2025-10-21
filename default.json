@@ -42,7 +42,8 @@
       {
         "matchDepNames": ["node"],
         "matchUpdateTypes": ["minor", "patch"],
-        "automerge": true
+        "automerge": true,
+        "minimumReleaseAge": "1 day"
       },
       {
         "matchPackageNames": ["pnpm"],
