@@ -55,7 +55,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
+      "managerFilePatterns": ["/^\\.github\\/workflows\\/.*\\.yml$/"],
       "matchStrings": [
         "node-version: \"(?<currentValue>.+)\"",
         "node-version: (?<currentValue>.+)"
@@ -67,7 +67,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
+      "managerFilePatterns": ["/^\\.github\\/workflows\\/.*\\.yml$/"],
       "matchStrings": [
         "pnpm-version: \"(?<currentValue>.+)\"",
         "pnpm-version: (?<currentValue>.+)"
@@ -77,7 +77,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
+      "managerFilePatterns": ["/^\\.github\\/workflows\\/.*\\.yml$/"],
       "matchStrings": [
         "terraform-version: \"(?<currentValue>.+)\"",
         "terraform-version: (?<currentValue>.+)"
@@ -88,7 +88,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": "^\\.github\\/workflows\\/.*\\.yml$",
+      "managerFilePatterns": ["/^\\.github\\/workflows\\/.*\\.yml$/"],
       "matchStrings": ["python-version: \"(?<currentValue>.+)\""],
       "datasourceTemplate": "github-tags",
       "depNameTemplate": "python/cpython",
